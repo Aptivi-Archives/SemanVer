@@ -133,7 +133,7 @@ namespace SemanVer.Instance
         {
             return $"{MajorVersion}.{MinorVersion}.{PatchVersion}" +
                     (!string.IsNullOrWhiteSpace(PreReleaseInfo) ? $"-{PreReleaseInfo}" : "") +
-                    (!string.IsNullOrWhiteSpace(BuildMetadata) ? $"-{BuildMetadata}" : "");
+                    (!string.IsNullOrWhiteSpace(BuildMetadata) ? $"+{BuildMetadata}" : "");
         }
 
         /// <summary>
