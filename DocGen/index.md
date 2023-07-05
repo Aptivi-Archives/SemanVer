@@ -1,6 +1,6 @@
 ## What is SemanVer?
 
-SemanVer is a C# library that allows you to process your `.lrc` or `.txt` lyric files with the basic and extended formats for use in your own music player that supports lyrics.
+SemanVer is a C# library that parses your semantic version strings according to the [SemVer 2.0](https://semver.org/) standards.
 
 ## What is this web page?
  
