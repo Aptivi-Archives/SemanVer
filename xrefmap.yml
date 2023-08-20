@@ -14,18 +14,24 @@ references:
   fullName: SemanVer.Instance.SemVer
   nameWithType: SemVer
 - uid: SemanVer.Instance.SemVer.#ctor(System.Int32,System.Int32,System.Int32,System.String,System.String)
-  name: SemVer(Int32, Int32, Int32, String, String)
+  name: SemVer(int, int, int, string, string)
   href: api/SemanVer.Instance.SemVer.html#SemanVer_Instance_SemVer__ctor_System_Int32_System_Int32_System_Int32_System_String_System_String_
   commentId: M:SemanVer.Instance.SemVer.#ctor(System.Int32,System.Int32,System.Int32,System.String,System.String)
-  fullName: SemanVer.Instance.SemVer.SemVer(System.Int32, System.Int32, System.Int32, System.String, System.String)
-  nameWithType: SemVer.SemVer(Int32, Int32, Int32, String, String)
+  name.vb: New(Integer, Integer, Integer, String, String)
+  fullName: SemanVer.Instance.SemVer.SemVer(int, int, int, string, string)
+  fullName.vb: SemanVer.Instance.SemVer.New(Integer, Integer, Integer, String, String)
+  nameWithType: SemVer.SemVer(int, int, int, string, string)
+  nameWithType.vb: SemVer.New(Integer, Integer, Integer, String, String)
 - uid: SemanVer.Instance.SemVer.#ctor*
   name: SemVer
   href: api/SemanVer.Instance.SemVer.html#SemanVer_Instance_SemVer__ctor_
   commentId: Overload:SemanVer.Instance.SemVer.#ctor
   isSpec: "True"
+  name.vb: New
   fullName: SemanVer.Instance.SemVer.SemVer
+  fullName.vb: SemanVer.Instance.SemVer.New
   nameWithType: SemVer.SemVer
+  nameWithType.vb: SemVer.New
 - uid: SemanVer.Instance.SemVer.BuildMetadata
   name: BuildMetadata
   href: api/SemanVer.Instance.SemVer.html#SemanVer_Instance_SemVer_BuildMetadata
@@ -59,11 +65,14 @@ references:
   fullName: SemanVer.Instance.SemVer.Equals(SemanVer.Instance.SemVer)
   nameWithType: SemVer.Equals(SemVer)
 - uid: SemanVer.Instance.SemVer.Equals(System.Object)
-  name: Equals(Object)
+  name: Equals(object)
   href: api/SemanVer.Instance.SemVer.html#SemanVer_Instance_SemVer_Equals_System_Object_
   commentId: M:SemanVer.Instance.SemVer.Equals(System.Object)
-  fullName: SemanVer.Instance.SemVer.Equals(System.Object)
-  nameWithType: SemVer.Equals(Object)
+  name.vb: Equals(Object)
+  fullName: SemanVer.Instance.SemVer.Equals(object)
+  fullName.vb: SemanVer.Instance.SemVer.Equals(Object)
+  nameWithType: SemVer.Equals(object)
+  nameWithType.vb: SemVer.Equals(Object)
 - uid: SemanVer.Instance.SemVer.Equals*
   name: Equals
   href: api/SemanVer.Instance.SemVer.html#SemanVer_Instance_SemVer_Equals_
@@ -136,90 +145,15 @@ references:
   isSpec: "True"
   fullName: SemanVer.Instance.SemVer.MinorVersion
   nameWithType: SemVer.MinorVersion
-- uid: SemanVer.Instance.SemVer.op_Equality(SemanVer.Instance.SemVer,SemanVer.Instance.SemVer)
-  name: Equality(SemVer, SemVer)
-  href: api/SemanVer.Instance.SemVer.html#SemanVer_Instance_SemVer_op_Equality_SemanVer_Instance_SemVer_SemanVer_Instance_SemVer_
-  commentId: M:SemanVer.Instance.SemVer.op_Equality(SemanVer.Instance.SemVer,SemanVer.Instance.SemVer)
-  fullName: SemanVer.Instance.SemVer.Equality(SemanVer.Instance.SemVer, SemanVer.Instance.SemVer)
-  nameWithType: SemVer.Equality(SemVer, SemVer)
-- uid: SemanVer.Instance.SemVer.op_Equality*
-  name: Equality
-  href: api/SemanVer.Instance.SemVer.html#SemanVer_Instance_SemVer_op_Equality_
-  commentId: Overload:SemanVer.Instance.SemVer.op_Equality
-  isSpec: "True"
-  fullName: SemanVer.Instance.SemVer.Equality
-  nameWithType: SemVer.Equality
-- uid: SemanVer.Instance.SemVer.op_GreaterThan(SemanVer.Instance.SemVer,SemanVer.Instance.SemVer)
-  name: GreaterThan(SemVer, SemVer)
-  href: api/SemanVer.Instance.SemVer.html#SemanVer_Instance_SemVer_op_GreaterThan_SemanVer_Instance_SemVer_SemanVer_Instance_SemVer_
-  commentId: M:SemanVer.Instance.SemVer.op_GreaterThan(SemanVer.Instance.SemVer,SemanVer.Instance.SemVer)
-  fullName: SemanVer.Instance.SemVer.GreaterThan(SemanVer.Instance.SemVer, SemanVer.Instance.SemVer)
-  nameWithType: SemVer.GreaterThan(SemVer, SemVer)
-- uid: SemanVer.Instance.SemVer.op_GreaterThan*
-  name: GreaterThan
-  href: api/SemanVer.Instance.SemVer.html#SemanVer_Instance_SemVer_op_GreaterThan_
-  commentId: Overload:SemanVer.Instance.SemVer.op_GreaterThan
-  isSpec: "True"
-  fullName: SemanVer.Instance.SemVer.GreaterThan
-  nameWithType: SemVer.GreaterThan
-- uid: SemanVer.Instance.SemVer.op_GreaterThanOrEqual(SemanVer.Instance.SemVer,SemanVer.Instance.SemVer)
-  name: GreaterThanOrEqual(SemVer, SemVer)
-  href: api/SemanVer.Instance.SemVer.html#SemanVer_Instance_SemVer_op_GreaterThanOrEqual_SemanVer_Instance_SemVer_SemanVer_Instance_SemVer_
-  commentId: M:SemanVer.Instance.SemVer.op_GreaterThanOrEqual(SemanVer.Instance.SemVer,SemanVer.Instance.SemVer)
-  fullName: SemanVer.Instance.SemVer.GreaterThanOrEqual(SemanVer.Instance.SemVer, SemanVer.Instance.SemVer)
-  nameWithType: SemVer.GreaterThanOrEqual(SemVer, SemVer)
-- uid: SemanVer.Instance.SemVer.op_GreaterThanOrEqual*
-  name: GreaterThanOrEqual
-  href: api/SemanVer.Instance.SemVer.html#SemanVer_Instance_SemVer_op_GreaterThanOrEqual_
-  commentId: Overload:SemanVer.Instance.SemVer.op_GreaterThanOrEqual
-  isSpec: "True"
-  fullName: SemanVer.Instance.SemVer.GreaterThanOrEqual
-  nameWithType: SemVer.GreaterThanOrEqual
-- uid: SemanVer.Instance.SemVer.op_Inequality(SemanVer.Instance.SemVer,SemanVer.Instance.SemVer)
-  name: Inequality(SemVer, SemVer)
-  href: api/SemanVer.Instance.SemVer.html#SemanVer_Instance_SemVer_op_Inequality_SemanVer_Instance_SemVer_SemanVer_Instance_SemVer_
-  commentId: M:SemanVer.Instance.SemVer.op_Inequality(SemanVer.Instance.SemVer,SemanVer.Instance.SemVer)
-  fullName: SemanVer.Instance.SemVer.Inequality(SemanVer.Instance.SemVer, SemanVer.Instance.SemVer)
-  nameWithType: SemVer.Inequality(SemVer, SemVer)
-- uid: SemanVer.Instance.SemVer.op_Inequality*
-  name: Inequality
-  href: api/SemanVer.Instance.SemVer.html#SemanVer_Instance_SemVer_op_Inequality_
-  commentId: Overload:SemanVer.Instance.SemVer.op_Inequality
-  isSpec: "True"
-  fullName: SemanVer.Instance.SemVer.Inequality
-  nameWithType: SemVer.Inequality
-- uid: SemanVer.Instance.SemVer.op_LessThan(SemanVer.Instance.SemVer,SemanVer.Instance.SemVer)
-  name: LessThan(SemVer, SemVer)
-  href: api/SemanVer.Instance.SemVer.html#SemanVer_Instance_SemVer_op_LessThan_SemanVer_Instance_SemVer_SemanVer_Instance_SemVer_
-  commentId: M:SemanVer.Instance.SemVer.op_LessThan(SemanVer.Instance.SemVer,SemanVer.Instance.SemVer)
-  fullName: SemanVer.Instance.SemVer.LessThan(SemanVer.Instance.SemVer, SemanVer.Instance.SemVer)
-  nameWithType: SemVer.LessThan(SemVer, SemVer)
-- uid: SemanVer.Instance.SemVer.op_LessThan*
-  name: LessThan
-  href: api/SemanVer.Instance.SemVer.html#SemanVer_Instance_SemVer_op_LessThan_
-  commentId: Overload:SemanVer.Instance.SemVer.op_LessThan
-  isSpec: "True"
-  fullName: SemanVer.Instance.SemVer.LessThan
-  nameWithType: SemVer.LessThan
-- uid: SemanVer.Instance.SemVer.op_LessThanOrEqual(SemanVer.Instance.SemVer,SemanVer.Instance.SemVer)
-  name: LessThanOrEqual(SemVer, SemVer)
-  href: api/SemanVer.Instance.SemVer.html#SemanVer_Instance_SemVer_op_LessThanOrEqual_SemanVer_Instance_SemVer_SemanVer_Instance_SemVer_
-  commentId: M:SemanVer.Instance.SemVer.op_LessThanOrEqual(SemanVer.Instance.SemVer,SemanVer.Instance.SemVer)
-  fullName: SemanVer.Instance.SemVer.LessThanOrEqual(SemanVer.Instance.SemVer, SemanVer.Instance.SemVer)
-  nameWithType: SemVer.LessThanOrEqual(SemVer, SemVer)
-- uid: SemanVer.Instance.SemVer.op_LessThanOrEqual*
-  name: LessThanOrEqual
-  href: api/SemanVer.Instance.SemVer.html#SemanVer_Instance_SemVer_op_LessThanOrEqual_
-  commentId: Overload:SemanVer.Instance.SemVer.op_LessThanOrEqual
-  isSpec: "True"
-  fullName: SemanVer.Instance.SemVer.LessThanOrEqual
-  nameWithType: SemVer.LessThanOrEqual
 - uid: SemanVer.Instance.SemVer.Parse(System.String)
-  name: Parse(String)
+  name: Parse(string)
   href: api/SemanVer.Instance.SemVer.html#SemanVer_Instance_SemVer_Parse_System_String_
   commentId: M:SemanVer.Instance.SemVer.Parse(System.String)
-  fullName: SemanVer.Instance.SemVer.Parse(System.String)
-  nameWithType: SemVer.Parse(String)
+  name.vb: Parse(String)
+  fullName: SemanVer.Instance.SemVer.Parse(string)
+  fullName.vb: SemanVer.Instance.SemVer.Parse(String)
+  nameWithType: SemVer.Parse(string)
+  nameWithType.vb: SemVer.Parse(String)
 - uid: SemanVer.Instance.SemVer.Parse*
   name: Parse
   href: api/SemanVer.Instance.SemVer.html#SemanVer_Instance_SemVer_Parse_
@@ -279,3 +213,117 @@ references:
   isSpec: "True"
   fullName: SemanVer.Instance.SemVer.ToString
   nameWithType: SemVer.ToString
+- uid: SemanVer.Instance.SemVer.op_Equality(SemanVer.Instance.SemVer,SemanVer.Instance.SemVer)
+  name: operator ==(SemVer, SemVer)
+  href: api/SemanVer.Instance.SemVer.html#SemanVer_Instance_SemVer_op_Equality_SemanVer_Instance_SemVer_SemanVer_Instance_SemVer_
+  commentId: M:SemanVer.Instance.SemVer.op_Equality(SemanVer.Instance.SemVer,SemanVer.Instance.SemVer)
+  name.vb: =(SemVer, SemVer)
+  fullName: SemanVer.Instance.SemVer.operator ==(SemanVer.Instance.SemVer, SemanVer.Instance.SemVer)
+  fullName.vb: SemanVer.Instance.SemVer.=(SemanVer.Instance.SemVer, SemanVer.Instance.SemVer)
+  nameWithType: SemVer.operator ==(SemVer, SemVer)
+  nameWithType.vb: SemVer.=(SemVer, SemVer)
+- uid: SemanVer.Instance.SemVer.op_Equality*
+  name: operator ==
+  href: api/SemanVer.Instance.SemVer.html#SemanVer_Instance_SemVer_op_Equality_
+  commentId: Overload:SemanVer.Instance.SemVer.op_Equality
+  isSpec: "True"
+  name.vb: =
+  fullName: SemanVer.Instance.SemVer.operator ==
+  fullName.vb: SemanVer.Instance.SemVer.=
+  nameWithType: SemVer.operator ==
+  nameWithType.vb: SemVer.=
+- uid: SemanVer.Instance.SemVer.op_GreaterThan(SemanVer.Instance.SemVer,SemanVer.Instance.SemVer)
+  name: operator >(SemVer, SemVer)
+  href: api/SemanVer.Instance.SemVer.html#SemanVer_Instance_SemVer_op_GreaterThan_SemanVer_Instance_SemVer_SemanVer_Instance_SemVer_
+  commentId: M:SemanVer.Instance.SemVer.op_GreaterThan(SemanVer.Instance.SemVer,SemanVer.Instance.SemVer)
+  name.vb: '>(SemVer, SemVer)'
+  fullName: SemanVer.Instance.SemVer.operator >(SemanVer.Instance.SemVer, SemanVer.Instance.SemVer)
+  fullName.vb: SemanVer.Instance.SemVer.>(SemanVer.Instance.SemVer, SemanVer.Instance.SemVer)
+  nameWithType: SemVer.operator >(SemVer, SemVer)
+  nameWithType.vb: SemVer.>(SemVer, SemVer)
+- uid: SemanVer.Instance.SemVer.op_GreaterThan*
+  name: operator >
+  href: api/SemanVer.Instance.SemVer.html#SemanVer_Instance_SemVer_op_GreaterThan_
+  commentId: Overload:SemanVer.Instance.SemVer.op_GreaterThan
+  isSpec: "True"
+  name.vb: '>'
+  fullName: SemanVer.Instance.SemVer.operator >
+  fullName.vb: SemanVer.Instance.SemVer.>
+  nameWithType: SemVer.operator >
+  nameWithType.vb: SemVer.>
+- uid: SemanVer.Instance.SemVer.op_GreaterThanOrEqual(SemanVer.Instance.SemVer,SemanVer.Instance.SemVer)
+  name: operator >=(SemVer, SemVer)
+  href: api/SemanVer.Instance.SemVer.html#SemanVer_Instance_SemVer_op_GreaterThanOrEqual_SemanVer_Instance_SemVer_SemanVer_Instance_SemVer_
+  commentId: M:SemanVer.Instance.SemVer.op_GreaterThanOrEqual(SemanVer.Instance.SemVer,SemanVer.Instance.SemVer)
+  name.vb: '>=(SemVer, SemVer)'
+  fullName: SemanVer.Instance.SemVer.operator >=(SemanVer.Instance.SemVer, SemanVer.Instance.SemVer)
+  fullName.vb: SemanVer.Instance.SemVer.>=(SemanVer.Instance.SemVer, SemanVer.Instance.SemVer)
+  nameWithType: SemVer.operator >=(SemVer, SemVer)
+  nameWithType.vb: SemVer.>=(SemVer, SemVer)
+- uid: SemanVer.Instance.SemVer.op_GreaterThanOrEqual*
+  name: operator >=
+  href: api/SemanVer.Instance.SemVer.html#SemanVer_Instance_SemVer_op_GreaterThanOrEqual_
+  commentId: Overload:SemanVer.Instance.SemVer.op_GreaterThanOrEqual
+  isSpec: "True"
+  name.vb: '>='
+  fullName: SemanVer.Instance.SemVer.operator >=
+  fullName.vb: SemanVer.Instance.SemVer.>=
+  nameWithType: SemVer.operator >=
+  nameWithType.vb: SemVer.>=
+- uid: SemanVer.Instance.SemVer.op_Inequality(SemanVer.Instance.SemVer,SemanVer.Instance.SemVer)
+  name: operator !=(SemVer, SemVer)
+  href: api/SemanVer.Instance.SemVer.html#SemanVer_Instance_SemVer_op_Inequality_SemanVer_Instance_SemVer_SemanVer_Instance_SemVer_
+  commentId: M:SemanVer.Instance.SemVer.op_Inequality(SemanVer.Instance.SemVer,SemanVer.Instance.SemVer)
+  name.vb: <>(SemVer, SemVer)
+  fullName: SemanVer.Instance.SemVer.operator !=(SemanVer.Instance.SemVer, SemanVer.Instance.SemVer)
+  fullName.vb: SemanVer.Instance.SemVer.<>(SemanVer.Instance.SemVer, SemanVer.Instance.SemVer)
+  nameWithType: SemVer.operator !=(SemVer, SemVer)
+  nameWithType.vb: SemVer.<>(SemVer, SemVer)
+- uid: SemanVer.Instance.SemVer.op_Inequality*
+  name: operator !=
+  href: api/SemanVer.Instance.SemVer.html#SemanVer_Instance_SemVer_op_Inequality_
+  commentId: Overload:SemanVer.Instance.SemVer.op_Inequality
+  isSpec: "True"
+  name.vb: <>
+  fullName: SemanVer.Instance.SemVer.operator !=
+  fullName.vb: SemanVer.Instance.SemVer.<>
+  nameWithType: SemVer.operator !=
+  nameWithType.vb: SemVer.<>
+- uid: SemanVer.Instance.SemVer.op_LessThan(SemanVer.Instance.SemVer,SemanVer.Instance.SemVer)
+  name: operator <(SemVer, SemVer)
+  href: api/SemanVer.Instance.SemVer.html#SemanVer_Instance_SemVer_op_LessThan_SemanVer_Instance_SemVer_SemanVer_Instance_SemVer_
+  commentId: M:SemanVer.Instance.SemVer.op_LessThan(SemanVer.Instance.SemVer,SemanVer.Instance.SemVer)
+  name.vb: <(SemVer, SemVer)
+  fullName: SemanVer.Instance.SemVer.operator <(SemanVer.Instance.SemVer, SemanVer.Instance.SemVer)
+  fullName.vb: SemanVer.Instance.SemVer.<(SemanVer.Instance.SemVer, SemanVer.Instance.SemVer)
+  nameWithType: SemVer.operator <(SemVer, SemVer)
+  nameWithType.vb: SemVer.<(SemVer, SemVer)
+- uid: SemanVer.Instance.SemVer.op_LessThan*
+  name: operator <
+  href: api/SemanVer.Instance.SemVer.html#SemanVer_Instance_SemVer_op_LessThan_
+  commentId: Overload:SemanVer.Instance.SemVer.op_LessThan
+  isSpec: "True"
+  name.vb: <
+  fullName: SemanVer.Instance.SemVer.operator <
+  fullName.vb: SemanVer.Instance.SemVer.<
+  nameWithType: SemVer.operator <
+  nameWithType.vb: SemVer.<
+- uid: SemanVer.Instance.SemVer.op_LessThanOrEqual(SemanVer.Instance.SemVer,SemanVer.Instance.SemVer)
+  name: operator <=(SemVer, SemVer)
+  href: api/SemanVer.Instance.SemVer.html#SemanVer_Instance_SemVer_op_LessThanOrEqual_SemanVer_Instance_SemVer_SemanVer_Instance_SemVer_
+  commentId: M:SemanVer.Instance.SemVer.op_LessThanOrEqual(SemanVer.Instance.SemVer,SemanVer.Instance.SemVer)
+  name.vb: <=(SemVer, SemVer)
+  fullName: SemanVer.Instance.SemVer.operator <=(SemanVer.Instance.SemVer, SemanVer.Instance.SemVer)
+  fullName.vb: SemanVer.Instance.SemVer.<=(SemanVer.Instance.SemVer, SemanVer.Instance.SemVer)
+  nameWithType: SemVer.operator <=(SemVer, SemVer)
+  nameWithType.vb: SemVer.<=(SemVer, SemVer)
+- uid: SemanVer.Instance.SemVer.op_LessThanOrEqual*
+  name: operator <=
+  href: api/SemanVer.Instance.SemVer.html#SemanVer_Instance_SemVer_op_LessThanOrEqual_
+  commentId: Overload:SemanVer.Instance.SemVer.op_LessThanOrEqual
+  isSpec: "True"
+  name.vb: <=
+  fullName: SemanVer.Instance.SemVer.operator <=
+  fullName.vb: SemanVer.Instance.SemVer.<=
+  nameWithType: SemVer.operator <=
+  nameWithType.vb: SemVer.<=
