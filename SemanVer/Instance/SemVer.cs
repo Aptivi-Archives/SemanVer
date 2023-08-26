@@ -25,7 +25,6 @@
 
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Text.RegularExpressions;
 
 namespace SemanVer.Instance
@@ -38,6 +37,7 @@ namespace SemanVer.Instance
         private readonly int major = 0;
         private readonly int minor = 0;
         private readonly int patch = 0;
+        private readonly int rev = 0;
         private readonly string preReleaseInfo = "";
         private readonly string buildMetadata = "";
 
@@ -58,6 +58,12 @@ namespace SemanVer.Instance
         /// </summary>
         public int PatchVersion =>
             patch;
+
+        /// <summary>
+        /// Gets the revision version part of the version
+        /// </summary>
+        public int RevisionVersion =>
+            rev;
 
         /// <summary>
         /// Gets the pre-release information part of the version
@@ -85,11 +91,25 @@ namespace SemanVer.Instance
         /// <param name="patch">Patch version</param>
         /// <param name="preReleaseInfo">Info about the pre-release version</param>
         /// <param name="buildMetadata">Info about the build metadata</param>
-        protected SemVer(int major, int minor, int patch, string preReleaseInfo, string buildMetadata)
+        protected SemVer(int major, int minor, int patch, string preReleaseInfo, string buildMetadata) :
+            this(major, minor, patch, 0, preReleaseInfo, buildMetadata)
+        { }
+
+        /// <summary>
+        /// Makes a new instance of this class
+        /// </summary>
+        /// <param name="major">Major version</param>
+        /// <param name="minor">Minor version</param>
+        /// <param name="patch">Patch version</param>
+        /// <param name="rev">Revision version</param>
+        /// <param name="preReleaseInfo">Info about the pre-release version</param>
+        /// <param name="buildMetadata">Info about the build metadata</param>
+        protected SemVer(int major, int minor, int patch, int rev, string preReleaseInfo, string buildMetadata)
         {
             this.major = major;
             this.minor = minor;
             this.patch = patch;
+            this.rev = rev;
             this.preReleaseInfo = preReleaseInfo;
             this.buildMetadata = buildMetadata;
         }
@@ -102,8 +122,7 @@ namespace SemanVer.Instance
         /// <exception cref="SemVerException"></exception>
         public static SemVer Parse(string value)
         {
-            // Verify that the semantic versioning string is a valid SemVer
-            // string
+            // Verify that the semantic versioning string is a valid SemVer string
             Regex validator = new(@"^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$");
             MatchCollection matches = validator.Matches(value);
             if (matches.Count == 0)
@@ -127,13 +146,55 @@ namespace SemanVer.Instance
         }
 
         /// <summary>
+        /// Parses the semantic version string with revision part
+        /// </summary>
+        /// <param name="value">Value that contains a SemVer 2.0 compliant string</param>
+        /// <returns>A <see cref="SemVer"/> class instance containing version information.</returns>
+        /// <exception cref="SemVerException"></exception>
+        public static SemVer ParseWithRev(string value)
+        {
+            // Verify that the semantic versioning string is a valid SemVer string
+            Regex validator = new(@"^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$");
+            MatchCollection matches = validator.Matches(value);
+            if (matches.Count == 0)
+                throw new SemVerException($"This version [{value}] is not a valid SemVer string.");
+
+            // Now, iterate through the matches to find the version parts
+            foreach (Match match in matches)
+            {
+                GroupCollection matchGroups = match.Groups;
+                if (!int.TryParse(matchGroups[1].Value, out int major))
+                    throw new SemVerException($"Invalid major version part");
+                if (!int.TryParse(matchGroups[2].Value, out int minor))
+                    throw new SemVerException($"Invalid minor version part");
+                if (!int.TryParse(matchGroups[3].Value, out int patch))
+                    throw new SemVerException($"Invalid patch version part");
+                if (!int.TryParse(matchGroups[4].Value, out int rev))
+                    throw new SemVerException($"Invalid revision version part");
+                string preReleaseInfo = matchGroups[5].Value;
+                string buildMetadata = matchGroups[6].Value;
+                return new SemVer(major, minor, patch, rev, preReleaseInfo, buildMetadata);
+            }
+            return null;
+        }
+
+        /// <summary>
         /// Converts the version instance to the string representation (a SemVer 2.0 compliant string)
         /// </summary>
         public override string ToString()
         {
-            return $"{MajorVersion}.{MinorVersion}.{PatchVersion}" +
+            string result;
+            if (rev > 0)
+                result =
+                    $"{MajorVersion}.{MinorVersion}.{PatchVersion}.{RevisionVersion}" +
                     (!string.IsNullOrWhiteSpace(PreReleaseInfo) ? $"-{PreReleaseInfo}" : "") +
                     (!string.IsNullOrWhiteSpace(BuildMetadata) ? $"+{BuildMetadata}" : "");
+            else
+                result =
+                    $"{MajorVersion}.{MinorVersion}.{PatchVersion}" +
+                    (!string.IsNullOrWhiteSpace(PreReleaseInfo) ? $"-{PreReleaseInfo}" : "") +
+                    (!string.IsNullOrWhiteSpace(BuildMetadata) ? $"+{BuildMetadata}" : "");
+            return result;
         }
 
         /// <summary>
@@ -165,8 +226,8 @@ namespace SemanVer.Instance
                 return 1;
 
             // First, get the normal version parts and compare both versions
-            Version normalVersion = new(MajorVersion, MinorVersion, PatchVersion);
-            Version normalVersionOther = new(other.MajorVersion, other.MinorVersion, other.PatchVersion);
+            Version normalVersion = new(MajorVersion, MinorVersion, PatchVersion, RevisionVersion);
+            Version normalVersionOther = new(other.MajorVersion, other.MinorVersion, other.PatchVersion, other.RevisionVersion);
             int stageOneCompare = normalVersion.CompareTo(normalVersionOther);
             if (stageOneCompare != 0)
                 return stageOneCompare;
@@ -239,10 +300,11 @@ namespace SemanVer.Instance
         /// <inheritdoc/>
         public override int GetHashCode()
         {
-            int hashCode = 339774980;
+            int hashCode = -1685347008;
             hashCode = hashCode * -1521134295 + MajorVersion.GetHashCode();
             hashCode = hashCode * -1521134295 + MinorVersion.GetHashCode();
             hashCode = hashCode * -1521134295 + PatchVersion.GetHashCode();
+            hashCode = hashCode * -1521134295 + RevisionVersion.GetHashCode();
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(PreReleaseInfo);
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(BuildMetadata);
             return hashCode;
