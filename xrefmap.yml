@@ -13,6 +13,15 @@ references:
   commentId: T:SemanVer.Instance.SemVer
   fullName: SemanVer.Instance.SemVer
   nameWithType: SemVer
+- uid: SemanVer.Instance.SemVer.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String)
+  name: SemVer(int, int, int, int, string, string)
+  href: api/SemanVer.Instance.SemVer.html#SemanVer_Instance_SemVer__ctor_System_Int32_System_Int32_System_Int32_System_Int32_System_String_System_String_
+  commentId: M:SemanVer.Instance.SemVer.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String)
+  name.vb: New(Integer, Integer, Integer, Integer, String, String)
+  fullName: SemanVer.Instance.SemVer.SemVer(int, int, int, int, string, string)
+  fullName.vb: SemanVer.Instance.SemVer.New(Integer, Integer, Integer, Integer, String, String)
+  nameWithType: SemVer.SemVer(int, int, int, int, string, string)
+  nameWithType.vb: SemVer.New(Integer, Integer, Integer, Integer, String, String)
 - uid: SemanVer.Instance.SemVer.#ctor(System.Int32,System.Int32,System.Int32,System.String,System.String)
   name: SemVer(int, int, int, string, string)
   href: api/SemanVer.Instance.SemVer.html#SemanVer_Instance_SemVer__ctor_System_Int32_System_Int32_System_Int32_System_String_System_String_
@@ -161,6 +170,22 @@ references:
   isSpec: "True"
   fullName: SemanVer.Instance.SemVer.Parse
   nameWithType: SemVer.Parse
+- uid: SemanVer.Instance.SemVer.ParseWithRev(System.String)
+  name: ParseWithRev(string)
+  href: api/SemanVer.Instance.SemVer.html#SemanVer_Instance_SemVer_ParseWithRev_System_String_
+  commentId: M:SemanVer.Instance.SemVer.ParseWithRev(System.String)
+  name.vb: ParseWithRev(String)
+  fullName: SemanVer.Instance.SemVer.ParseWithRev(string)
+  fullName.vb: SemanVer.Instance.SemVer.ParseWithRev(String)
+  nameWithType: SemVer.ParseWithRev(string)
+  nameWithType.vb: SemVer.ParseWithRev(String)
+- uid: SemanVer.Instance.SemVer.ParseWithRev*
+  name: ParseWithRev
+  href: api/SemanVer.Instance.SemVer.html#SemanVer_Instance_SemVer_ParseWithRev_
+  commentId: Overload:SemanVer.Instance.SemVer.ParseWithRev
+  isSpec: "True"
+  fullName: SemanVer.Instance.SemVer.ParseWithRev
+  nameWithType: SemVer.ParseWithRev
 - uid: SemanVer.Instance.SemVer.PatchVersion
   name: PatchVersion
   href: api/SemanVer.Instance.SemVer.html#SemanVer_Instance_SemVer_PatchVersion
@@ -187,6 +212,19 @@ references:
   isSpec: "True"
   fullName: SemanVer.Instance.SemVer.PreReleaseInfo
   nameWithType: SemVer.PreReleaseInfo
+- uid: SemanVer.Instance.SemVer.RevisionVersion
+  name: RevisionVersion
+  href: api/SemanVer.Instance.SemVer.html#SemanVer_Instance_SemVer_RevisionVersion
+  commentId: P:SemanVer.Instance.SemVer.RevisionVersion
+  fullName: SemanVer.Instance.SemVer.RevisionVersion
+  nameWithType: SemVer.RevisionVersion
+- uid: SemanVer.Instance.SemVer.RevisionVersion*
+  name: RevisionVersion
+  href: api/SemanVer.Instance.SemVer.html#SemanVer_Instance_SemVer_RevisionVersion_
+  commentId: Overload:SemanVer.Instance.SemVer.RevisionVersion
+  isSpec: "True"
+  fullName: SemanVer.Instance.SemVer.RevisionVersion
+  nameWithType: SemVer.RevisionVersion
 - uid: SemanVer.Instance.SemVer.SpecialVersion
   name: SpecialVersion
   href: api/SemanVer.Instance.SemVer.html#SemanVer_Instance_SemVer_SpecialVersion
