@@ -2,19 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://aptivi.github.io/SemanVer/api/SemanVer.Instance.SemVer.html</loc>
-    <lastmod>2023-09-12T06:42:09+00:00</lastmod>
+    <lastmod>2023-10-29T11:15:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/SemanVer/api/SemanVer.Instance.html</loc>
-    <lastmod>2023-09-12T06:42:09+00:00</lastmod>
+    <lastmod>2023-10-29T11:15:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/SemanVer/index.html</loc>
-    <lastmod>2023-09-12T06:42:09+00:00</lastmod>
+    <lastmod>2023-10-29T11:15:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
